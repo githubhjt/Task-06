@@ -14,10 +14,15 @@ function draw() {
     s.addParticle();
     s.run(); 
   }
+  if (mouseIsPressed) {
+    let mpos = createVector (mouseX, mouseY);
+    let s = new ParticleSystem(mpos);
+    systems.push(s);
+  }
 }
 
-function mouseClicked() {
-  let mpos = createVector(mouseX, mouseY);
-  let s = new ParticleSystem(mpos);
-  systems.push(s);
-}
+// function mouseClicked() {
+//   let mpos = createVector(mouseX, mouseY);
+//   let s = new ParticleSystem(mpos);
+//   systems.push(s);
+// }
