@@ -13,6 +13,8 @@ function draw() {
     s.add(gravity);
     s.addParticle();
     s.run(); 
+    s.checkEdges();
+    s.checkEdges1();
   }
   if (mouseIsPressed) {
     let mpos = createVector (mouseX, mouseY);
