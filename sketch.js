@@ -8,7 +8,7 @@ function setup() {
 }
 
 function draw() {
-  background(51);
+  background(51, 20);
   gravity = createVector(0, 1);
   systems.add(gravity);
     systems.addParticle();
