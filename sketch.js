@@ -1,15 +1,16 @@
-let gravity;
+
 let systems;
 
 function setup() {
   createCanvas(720, 400);
   systems = new ParticleSystem(createVector(width/2, 70));
-  gravity = createVector(0, 0.05);
+
 }
 
 function draw() {
   background(51);
-
+  let gravity = createVector(0, 0.05);
+  systems.applyForce(gravity);
     systems.addParticle();
     systems.run();
 }
