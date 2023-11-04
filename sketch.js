@@ -14,6 +14,8 @@ function draw() {
     s.add(gravity);
     s.addParticle();
     s.run();
+    s.checkEdges();
+    s.checkEdges1();
   } 
 
   if (mouseIsPressed) {
@@ -22,7 +24,7 @@ function draw() {
     systems.push(s);
   }
 
-  let particles = new Particle(createVector);
-  particles.checkEdges();
-  particles.checkEdges1();
+  // let particles = new Particle(createVector);
+  // particles.checkEdges();
+  // particles.checkEdges1();
 }
