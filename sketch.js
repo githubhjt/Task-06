@@ -9,7 +9,7 @@ function setup() {
 
 function draw() {
   background(51);
-  gravity = createVector(0, 10);
+  gravity = createVector(0, 1);
   systems.add(gravity);
     systems.addParticle();
     systems.run();
