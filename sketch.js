@@ -1,10 +1,12 @@
 
 let systems = [];
+let system;
 let gravity;
 
 function setup() {
   createCanvas(720, 400);
   gravity = createVector(0, 1);
+  system = new ParticleSystem();
 }
 
 function draw() {
@@ -14,8 +16,11 @@ function draw() {
     s.add(gravity);
     s.addParticle();
     s.run();
-    s.checkEdges();
-    s.checkEdges1();
+
+    system.checkEdges();
+    system.checkEdges1();
+    // s.checkEdges();
+    // s.checkEdges1();
   } 
 
   if (mouseIsPressed) {
