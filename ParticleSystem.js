@@ -24,17 +24,4 @@ class ParticleSystem {
       }
     }
   }
-
-  checkEdges() {
-    if (this.position.y > height) {
-      this.velocity.y *= -1;
-      this.position.y = height;
-    }
-  }
-  
-  checkEdges1() {
-    if (this.velocity.y < 0) {
-      this.velocity.x += 0.1;
-    }
-  }
 }
