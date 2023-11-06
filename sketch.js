@@ -1,21 +1,30 @@
+
+let systems = [];
 let gravity;
-let systems;
 
 function setup() {
   createCanvas(720, 400);
-  systems = new ParticleSystem(createVector(width/2, 70));
   gravity = createVector(0, 1);
 }
 
 function draw() {
-  background(51);
-    systems.add(gravity);
-    systems.addParticle();
-    systems.run();
-}
+  background(51, 15);
 
-// function mouseClicked() {
-//   let mpos = createVector(mouseX, mouseY);
-//   let s = new ParticleSystem(mpos);
-//   systems.push(s);
-// }
+  for (let s of systems) {
+    s.add(gravity);
+    s.addParticle();
+    s.run();
+    s.checkEdges();
+    s.checkEdges1();
+  } 
+
+  if (mouseIsPressed) {
+    let mpos = createVector (mouseX, mouseY);
+    let s = new ParticleSystem(mpos);
+    systems.push(s);
+  }
+
+  // let particles = new Particle(createVector);
+  // particles.checkEdges();
+  // particles.checkEdges1();
+}
