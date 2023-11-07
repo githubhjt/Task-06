@@ -8,7 +8,7 @@ function setup() {
 }
 
 function draw() {
-  background(51, 10);
+  background(51, 15);
 
   for (let s of systems) {
     s.add(gravity);

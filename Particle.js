@@ -20,7 +20,7 @@ class Particle {
   update() {
     this.velocity.add(this.acceleration);
     this.position.add(this.velocity);
-    this.lifespan -= 2;
+    this.lifespan -= 2.5;
     this.acceleration = createVector(0,0);
 
   }
