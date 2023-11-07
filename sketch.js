@@ -13,9 +13,15 @@ function draw() {
   for (let s of systems) {
     s.add(gravity);
     s.addParticle();
+
+    for (let p of s.particles) {
+      p.checkEdges();
+      p.checkEdges1();
+    } 
     s.run();
     // s.checkEdges();
     // s.checkEdges1();
+
   } 
 
   if (mouseIsPressed) {

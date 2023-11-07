@@ -8,6 +8,8 @@ class Particle {
 
   run() {
     this.update();
+    // this.checkEdges();
+    // this.checkEdges1();
     this.display();
   }
 
@@ -20,8 +22,7 @@ class Particle {
     this.position.add(this.velocity);
     this.lifespan -= 2;
     this.acceleration = createVector(0,0);
-    this.checkEdges();
-    this.checkEdges1();
+
   }
 
   display() {
